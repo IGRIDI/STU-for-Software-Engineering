@@ -50,7 +50,37 @@ void Library::TakeBook()
 
 void Library::BackBook()
 {
-	
+	int s = 0;
+	for (int i = 0; i < amount; i++)
+	{
+		if (Library_Foundation[i].Status != 0)
+		{
+			cout << i + 1 << " --- " << Library_Foundation[i].Name << endl;
+			s++;
+		}
+	}
+
+	if (s == 0)
+	{
+		cout << endl << "Вы отдали все книги! " << endl;
+		system("pause");
+		return;
+	}
+	int k;
+	cout << "Введите номер: ";
+	cin >> k;
+	k--;
+
+	if (k<0 || k>s || Library_Foundation[k].Status == 0)
+	{
+		cout << endl << "Неверный номер книги!" << endl;
+	}
+	else
+	{
+		Library_Foundation[k].Status = 0;
+		cout << endl << "Спасибо что вернули книгу " << Library_Foundation[k].Name << endl;
+	}
+	system("pause");
 }
 
 void Library::AddBook()
