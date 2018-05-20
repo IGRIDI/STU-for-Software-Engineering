@@ -17,4 +17,10 @@ public:
 	User use;
 	Work Wr[3];
 
+	Student(char* per1, char *per2, bool per3);
+	void AddWork();
+	void Teacher_Test();
+	void TakeBook(Library *Library_Foundation);
+	void GiveBook(Library *Library_Foundation);
+
 };
