@@ -14,7 +14,6 @@ void Deanery::CorrectStud()
 	system("pause");
 }
 
-
 void Deanery::AddStud()
 {
 	cout << "Студент добавлен!" << endl;
